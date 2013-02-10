@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="css/main.css">
+      <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+
+    <body class="page-profile" style="background: #d8d8d8;">
+      <div class="root noScroll">
+        <div class="page">
+          <header class="top-bar top-bar-new">
+            <div class="top-bar-wrapper">
+              <h1 class="logo"><a href="#">Adrianogram</a></h1>
+            </div>
+          </header> <!-- .top-bar -->
+
+          <div class="main">
+            <div id="uploaded-photo">
+              <canvas width="500" height="500" id="canvas"></canvas>
+            </div>
+
+            <div class="filters">
+              <ul id="filters" class="jcarousel-skin-tango">
+                <li id="bobruisk-filter"><img src="img/bobruisk-preview.jpg" alt="Bobruisk"><span>Bobruisk</span></li>
+                <li id="paris-filter"><img src="img/paris-preview.jpg" alt="Bobruisk"><span>Paris</span></li>
+                <li id="luksore-filter"><img src="img/luksore-preview.jpg" alt="Bobruisk"><span>Luskore</span></li>
+                <li id="budda-filter"><img src="img/budda-preview.jpg" alt="Bobruisk"><span>Budda</span></li>
+                <li id="1-filter"><img src="img/bobruisk-preview.jpg" alt="Bobruisk"><span>Bobruisk</span></li>
+                <li id="2-filter"><img src="img/paris-preview.jpg" alt="Bobruisk"><span>Paris</span></li>
+                <li id="3-filter"><img src="img/luksore-preview.jpg" alt="Bobruisk"><span>Luskore</span></li>
+                <li id="4-filter"><img src="img/budda-preview.jpg" alt="Bobruisk"><span>Budda</span></li>
+              </ul>
+            </div>
+
+            <div class="buttons">
+              <div class="file-button-container">
+                <input type="file" id="imageLoader"/>
+              </div>
+              <div class="save-button-container">
+                <input id="saveImage" type="button" value="Save" disabled="disabled"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+      <script src="http://code.createjs.com/easeljs-0.5.0.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+      <script src="js/vendor/jcarousel.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=('https:'==location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+    </body>
+</html>
