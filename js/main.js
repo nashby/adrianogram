@@ -55,15 +55,20 @@ var handleSaveImage = function (event) {
 var handleMainImageLoad = function (event) {
   var image = event.target;
 
+  if (container) {
+    container.removeChild(currentFilter);
+    stage.removeChild(container);
+  }
+
   container = new createjs.Container();
   stage.addChild(container);
 
-  var mainImageBitmap = new createjs.Bitmap(image);
+  mainImageBitmap = new createjs.Bitmap(image);
   mainImageBitmap.scaleX = 500 / image.width;
   mainImageBitmap.scaleY = 500 / image.height;
 
   container.addChild(mainImageBitmap);
-
+  stage.update();
   createjs.Ticker.addListener(window);
 }
 
@@ -79,7 +84,6 @@ var handleFilterLoad = function (event) {
   currentFilter.regY = image.height / 2 | 0;
 
   (function(target) {
-    console.log(currentFilter);
     currentFilter.onPress = function(evt) {
       container.addChild(target);
       var offset = {x:target.x-evt.stageX, y:target.y-evt.stageY};
@@ -109,7 +113,7 @@ var dragStarted;
 var offset;
 var update = true;
 
-var mainImage, currentFilter;
+var mainImage, mainImageBitmap, currentFilter;
 
 var imageLoader = document.getElementById('imageLoader');
     imageLoader.addEventListener('change', handleUploadImage, false);
