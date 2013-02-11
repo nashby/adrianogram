@@ -37,6 +37,7 @@ var handleUploadImage = function (event) {
     mainImage.onload = function(event) {
       init();
       handleMainImageLoad(event);
+      $(saveButton).parent().removeClass('disabled');
       saveButton.removeAttribute('disabled');
     }
 
