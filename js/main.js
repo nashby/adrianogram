@@ -48,8 +48,11 @@ var handleUploadImage = function (event) {
 }
 
 var handleSaveImage = function (event) {
-  var url = canvas.toDataURL();
-  window.location.href = url.replace('image/png', 'image/octet-stream');
+  ctx = canvas.getContext("2d");
+
+  canvas.toBlob(function(blob) {
+    saveAs(blob, "adrianov.png");
+  });
 }
 
 var handleMainImageLoad = function (event) {
