@@ -66,9 +66,17 @@ var handleMainImageLoad = function (event) {
   container = new createjs.Container();
   stage.addChild(container);
 
+  var min;
+  if (image.width < image.height) {
+    min = image.width;
+  } else {
+    min = image.height;
+  }
+
   mainImageBitmap = new createjs.Bitmap(image);
-  mainImageBitmap.scaleX = 500 / image.width;
-  mainImageBitmap.scaleY = 500 / image.height;
+  mainImageBitmap.sourceRect = new createjs.Rectangle(0, 0, min, min);
+  mainImageBitmap.scaleX = 500 / min;
+  mainImageBitmap.scaleY = 500 / min;
 
   container.addChild(mainImageBitmap);
   stage.update();
