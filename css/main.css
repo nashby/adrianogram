@@ -2,6 +2,15 @@
    Author's custom styles
    ========================================================================== */
 
+.preload-0 { background: url(../img/bobruisk-filter.png) no-repeat -9999px -9999px; }
+.preload-1 { background: url(../img/luksore-filter.png) no-repeat -9999px -9999px; }
+.preload-2 { background: url(../img/budda-filter.png) no-repeat -9999px -9999px; }
+.preload-3 { background: url(../img/bus-filter.png) no-repeat -9999px -9999px; }
+.preload-4 { background: url(../img/zehr-shon-filter.png) no-repeat -9999px -9999px; }
+.preload-5 { background: url(../img/moskow-filter.png) no-repeat -9999px -9999px; }
+.preload-6 { background: url(../img/kiev-filter.png) no-repeat -9999px -9999px; }
+.preload-7 { background: url(../img/paris-filter.png) no-repeat -9999px -9999px; }
+
 #uploaded-photo {
     width: 500px;
     margin: 10px auto;
