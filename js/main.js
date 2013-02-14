@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
   jQuery('#filters').jcarousel();
+  placeholder();
 });
 
 var init = function () {
@@ -14,6 +15,19 @@ var init = function () {
 
 var stop = function () {
   Ticker.removeListener(window);
+}
+
+var placeholder = function() {
+  mainImage = new Image();
+
+  mainImage.onload = function(event) {
+    init();
+    handleMainImageLoad(event);
+    $(saveButton).parent().removeClass('disabled');
+    saveButton.removeAttribute('disabled');
+  }
+
+  mainImage.src = "img/placeholder.jpg";
 }
 
 var handleFilterClick = function (event) {
