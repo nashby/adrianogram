@@ -66,7 +66,7 @@ var handleSaveImage = function (event) {
 
   canvas.toBlob(function(blob) {
     saveAs(blob, "adrianov.png");
-  });
+  }, "image/png");
 }
 
 var handleMainImageLoad = function (event) {
